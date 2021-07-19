@@ -82,7 +82,7 @@ function Arr1(myArr) {
     let arrNumber = [];
     let arrString = [];
     let arrBoolean = [];
-    for(i = 0; i < myArr.length; i++) {
+    for(let i = 0; i < myArr.length; i++) {
         if (typeof myArr === 'number') {
             arrNumber.push(...myArr);
         }
