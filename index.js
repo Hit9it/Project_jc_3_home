@@ -1,5 +1,6 @@
 // - створити функцію яка обчислює та повертає площу прямокутника висотою
 function PlPr(a,b){
+    let S;
     S = a * b;
     return S;
 }
@@ -12,6 +13,7 @@ console.log(s);
 
 // - створити функцію яка обчислює та повертає площу кола
 function PlKola(y){
+    let S;
     S = Math.PI * Math.pow(y,2);
     return S;
 }
@@ -23,7 +25,8 @@ console.log(O);
 
 // - створити функцію яка обчислює та повертає площу циліндру
 function PlSel(a,b){
-    S = 2*Math.PI*Math.pow(r,2)+(2*Math.PI*h)
+    let S;
+    S = 2*Math.PI*Math.pow(a,2)+(2*Math.PI*b)
     return S;
 }
 let r = 40;
@@ -36,7 +39,23 @@ console.log(C);
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше
 // (Math використовувати заборонено);
 
+function max_min(){
+    let max = arguments[0];
+    let min = arguments[0];
 
+    for (let number of arguments) {
+        if (number > max) {
+            max = number;
+        }
+        if (number < min) {
+            min = number;
+        }
+    }
+
+    console.log('max: ', max);
+    return min;
+}
+console.log(max_min(66, -19, 5, -6, 1, -11));
 
 
 // - створити функцію яка створює блок з текстом. Текст задати через аргумент
@@ -83,14 +102,14 @@ function Arr1(myArr) {
     let arrString = [];
     let arrBoolean = [];
     for(let i = 0; i < myArr.length; i++) {
-        if (typeof myArr === 'number') {
-            arrNumber.push(...myArr);
+        if (typeof myArr[i] === 'number') {
+            arrNumber.push(myArr[i]);
         }
-        if (typeof myArr === 'string') {
-            arrString.push(...myArr);
+        if (typeof myArr[i] === 'string') {
+            arrString.push(myArr[i]);
         }
-        if (typeof myArr === 'boolean') {
-            arrBoolean.push(...myArr);
+        if (typeof myArr[i] === 'boolean') {
+            arrBoolean.push(myArr[i]);
         }
     }
     console.log(arrNumber);
